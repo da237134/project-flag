@@ -23,9 +23,11 @@ maps_dictionary = { "India" : india_map ,
 
 def showMaps():
     map_name = get_input.get()
-    # Add a try and except block to handle the error created by the following line of code
-    show_label['image'] = maps_dictionary[map_name]
-
+    try: 
+      show_label['image'] = maps_dictionary[map_name]
+    exept: 
+      messagebox. showinfo("error",sorry we dont have that countrys flag)
+    
 btn = Button(root , text="Show Map", bg="green", command=showMaps)
 get_input.place(relx=0.5, rely=0.1, anchor=CENTER)
 btn.place(relx=0.5, rely=0.2, anchor=CENTER)
